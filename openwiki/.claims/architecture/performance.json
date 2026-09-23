@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:c02e4bdbc458c12fa1685346ca5747d226d82070a6c15009b800805396464e18",
+  "claims": [
+    {
+      "id": "claim_1ea4e20247784b01ae859f7493bacc08",
+      "statement": "The CodeWriter class uses a linkedHashMap called importableTypes to memoize simple-name-to-fully-qualified-name mappings for types that cannot be resolved through existing imports, nesting context, or same-package scope.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java",
+          "version": "repo-file-v1:sha256:d37bfd04070cf632a2d447ed85427a14b249de75db7f1a7eb0a313f721e276c2"
+        }
+      ]
+    },
+    {
+      "id": "claim_e0c2513eefa343f5aba3eea47d7b3193",
+      "statement": "The lookupName method resolves type names by walking outward from the target class through its enclosing classes, checking at each level whether a local simple name matches via imported types and nesting context.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java",
+          "version": "repo-file-v1:sha256:d37bfd04070cf632a2d447ed85427a14b249de75db7f1a7eb0a313f721e276c2"
+        }
+      ]
+    },
+    {
+      "id": "claim_eedd13f5aa01413cac5c979bd39e01fe",
+      "statement": "The typeSpecStack is a mutable builder list that tracks the current nesting context during code emission, enabling scope-aware resolution of nested types.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java",
+          "version": "repo-file-v1:sha256:d37bfd04070cf632a2d447ed85427a14b249de75db7f1a7eb0a313f721e276c2"
+        }
+      ]
+    },
+    {
+      "id": "claim_77ee81a8a08d461e93a24fd48c25c26a",
+      "statement": "Import suggestion generation uses a two-pass algorithm: the first pass collects candidates during traversal, and the second pass filters out same-package references via referencedNames to produce final suggestions.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java",
+          "version": "repo-file-v1:sha256:d37bfd04070cf632a2d447ed85427a14b249de75db7f1a7eb0a313f721e276c2"
+        }
+      ]
+    },
+    {
+      "id": "claim_9b4410133e8241178c60555019c68e4f",
+      "statement": "The LineWrapper class implements soft-wrapping on an appendable by buffering characters until a line wrap is needed, then emitting a newline followed by indentation based on the current indent level.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/LineWrapper.java",
+          "version": "repo-file-v1:sha256:5bce40fb319f3a9a95d50edaf5b19198f22a5884c7b85c2dc3fcf189095a10b3"
+        }
+      ]
+    },
+    {
+      "id": "claim_a690799696d64041becbddeea146165b",
+      "statement": "The wrappingSpace method defers emission of either a literal space or a newline-plus-indent sequence until the next flush, using an enum FlushType to track the deferred action.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/LineWrapper.java",
+          "version": "repo-file-v1:sha256:5bce40fb319f3a9a95d50edaf5b19198f22a5884c7b85c2dc3fcf189095a10b3"
+        }
+      ]
+    },
+    {
+      "id": "claim_0903f16f5bef44ac88af6b1f041bfd15",
+      "statement": "The zeroWidthSpace method defers a line break (no newline or space) when the current column is non-zero, ensuring logical content that doesn't naturally span multiple lines still gets readable breaks.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/LineWrapper.java",
+          "version": "repo-file-v1:sha256:5bce40fb319f3a9a95d50edaf5b19198f22a5884c7b85c2dc3fcf189095a10b3"
+        }
+      ]
+    },
+    {
+      "id": "claim_b2ac53a477c949c0bfb073e12dcfe9e0",
+      "statement": "The emitAndIndent method emits indentation lazily only at line boundaries to avoid trailing whitespace on wrapped lines, and handles comment prefixes for Javadoc (\" * \") versus single-line comments (\"/\\/ \").",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java",
+          "version": "repo-file-v1:sha256:d37bfd04070cf632a2d447ed85427a14b249de75db7f1a7eb0a313f721e276c2"
+        }
+      ]
+    },
+    {
+      "id": "claim_90d489cb075145909dcacf0296079f66",
+      "statement": "The statementLine field tracks whether the current line is part of a multi-line statement; when it reaches zero after incrementing, indent increases by 2 to establish double-indentation for continuations.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java",
+          "version": "repo-file-v1:sha256:d37bfd04070cf632a2d447ed85427a14b249de75db7f1a7eb0a313f721e276c2"
+        }
+      ]
+    },
+    {
+      "id": "claim_f762f700d990450fa255cd115681b508",
+      "statement": "The suggestedImports method returns a linkedHashMap of types that need import statements by copying importableTypes and removing any names present in referencedNames (same-package references).",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java",
+          "version": "repo-file-v1:sha256:d37bfd04070cf632a2d447ed85427a14b249de75db7f1a7eb0a313f721e276c2"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-22T02:45:45.818Z"
+  }
+}

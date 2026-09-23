@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:16c8873416286798500cf7d117c78e458b0f4cf5e6420c8dfc85865ff969c765",
+  "claims": [
+    {
+      "id": "claim_7cd2b4bf9eaf4a2dbe7b4e76f4306185",
+      "statement": "Build integration testing bridges compile-time generation and runtime behavior by making the compiler's output explicit, verifiable, and directly comparable against declarative intent; it treats compilation as an observable process rather than a black box.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        }
+      ]
+    },
+    {
+      "id": "claim_90e9b8514ed1405eadcfe6cfcf7a323f",
+      "statement": "The two-pass emission strategy separates import collection from code emission, which is necessary because import resolution requires forward-looking analysis of all type usages, including nested types declared later in the source.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        }
+      ]
+    },
+    {
+      "id": "claim_8bc42a558bbf448594fb81617d6bdd2d",
+      "statement": "Truth assertions on emitted source are more robust than simple string comparison for generated code because they can handle deterministic canonical forms while also providing structured verification (import-set checking, structural parsing) when exact equality is impractical.",
+      "evidence": [
+        {
+          "resource": "repo://src/test/java/com/squareup/javapoet/JavaFileTest.java",
+          "version": "repo-file-v1:sha256:d8d8d4e1513259347e2e143a5b16d5761bd64ef5cd7f9d89ff7d578ec3d267a7"
+        }
+      ]
+    },
+    {
+      "id": "claim_b181e66e7a68402b9c8eeb32df4e6f26",
+      "statement": "The format string system uses minimal placeholders ($T, $S, $L, $>, $<) without an expression class or AST node model, which means method bodies and constructor initializers are represented as plain strings that the code generator emits verbatim while still participating in import resolution through type placeholder expansion.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java",
+          "version": "repo-file-v1:sha256:d37bfd04070cf632a2d447ed85427a14b249de75db7f1a7eb0a313f721e276c2"
+        }
+      ]
+    },
+    {
+      "id": "claim_24df7204e7ae47babc26b83c92882b7d",
+      "statement": "Import resolution maintains the invariant of no duplicate imports by collecting types into a TreeSet-based structure during the first pass, with 'first-insert-wins' semantics for static import collision handling documented and tested.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        },
+        {
+          "resource": "repo://src/test/java/com/squareup/javapoet/JavaFileTest.java",
+          "version": "repo-file-v1:sha256:d8d8d4e1513259347e2e143a5b16d5761bd64ef5cd7f9d89ff7d578ec3d267a7"
+        }
+      ]
+    },
+    {
+      "id": "claim_a1c4daed7b7540e2b62821c617c89da9",
+      "statement": "The integration contract requires that generated source compiles without errors, produces expected runtime behavior when executed, and has all dependencies properly resolved, verified through three layers: syntax (compilation), structure (AST parsing), and behavioral (unit tests against compiled artifacts).",
+      "evidence": [
+        {
+          "resource": "repo://src/test/java/com/squareup/javapoet/JavaFileTest.java",
+          "version": "repo-file-v1:sha256:d8d8d4e1513259347e2e143a5b16d5761bd64ef5cd7f9d89ff7d578ec3d267a7"
+        },
+        {
+          "resource": "repo://src/test/java/com/squareup/javapoet/TestFiler.java",
+          "version": "repo-file-v1:sha256:7238b636919b4f21b760f3af1680b6f5a7a45e38214a4bc5657fdfa59f14a47a"
+        }
+      ]
+    },
+    {
+      "id": "claim_ce0220bbe42c423dbb2fe3032d4c5f43",
+      "statement": "Conflicting Java.lang name shadows are handled by the skipJavaLangImports flag combined with an alwaysQualify set, where names in alwaysQualify force full qualification even when they would otherwise be implicitly available, as verified through dedicated conflicting import test cases.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        },
+        {
+          "resource": "repo://src/test/java/com/squareup/javapoet/JavaFileTest.java",
+          "version": "repo-file-v1:sha256:d8d8d4e1513259347e2e143a5b16d5761bd64ef5cd7f9d89ff7d578ec3d267a7"
+        }
+      ]
+    },
+    {
+      "id": "claim_d377ee26d6dc4917a961a9af362a1cce",
+      "statement": "Line wrapping enforces a maximum line length (default 100 characters) with double-indent continuation for multi-line statements, and the system prevents statement spans across block boundaries without explicit formatting controls to avoid compilation failures.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java",
+          "version": "repo-file-v1:sha256:d37bfd04070cf632a2d447ed85427a14b249de75db7f1a7eb0a313f721e276c2"
+        }
+      ]
+    },
+    {
+      "id": "claim_38cd3f058c5d43c4a0fb3c9844c2deb8",
+      "statement": "Extensibility is supported through builder pattern customization, format string extension, import strategy overrides, and line wrapping configuration, allowing adaptation to different language dialects and compilation targets.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java",
+          "version": "repo-file-v1:sha256:d37bfd04070cf632a2d447ed85427a14b249de75db7f1a7eb0a313f721e276c2"
+        },
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-22T02:45:45.818Z"
+  }
+}

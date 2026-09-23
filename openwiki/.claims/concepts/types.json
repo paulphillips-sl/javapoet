@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:8e6e1cf89de62b1105679a553f375afbfa9552aa270cc9730425b556218028fd",
+  "claims": [
+    {
+      "id": "claim_40f28360976e467483df543df30a95bb",
+      "statement": "TypeName is the foundational immutable value object that represents any Java type (primitives, void, reference classes, arrays, generics, wildcards, and type variables) in Javapoet's type model.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeName.java",
+          "version": "repo-file-v1:sha256:94e9c9651dd369425bebe85ec654dd862834597500fe89a7ab4c3f6343857483"
+        }
+      ]
+    },
+    {
+      "id": "claim_160f8fcd41a741c2a8f82e5b174eda79",
+      "statement": "ClassName extends the type model to represent fully-qualified class names with enclosure chains for nested types (e.g., java.util.Map.Entry).",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/ClassName.java",
+          "version": "repo-file-v1:sha256:5720dfc422e48b0e3b3cc6fb71c2c0fe1b0ef7ab310e68e6c8d454452fedcdf6"
+        }
+      ]
+    },
+    {
+      "id": "claim_26c6381db57f497d95a6ed1d558e575b",
+      "statement": "TypeSpec is the top-level declaration type that represents complete Java declarations (classes, interfaces, enums, annotations) and drives code generation via emit().",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeSpec.java",
+          "version": "repo-file-v1:sha256:c750e1988351104ed08e1c1c4ee67ded6da71073dd954103fc87e363c5230c57"
+        }
+      ]
+    },
+    {
+      "id": "claim_ef2783bd0d5e45b3ae41085f70dcc3a9",
+      "statement": "TypeSpec validation on build() enforces domain invariants such as enum constants requiring anonymous class bodies, interface member modifier rules.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeSpec.java#L759-L820",
+          "version": "repo-lines-v1:sha256:b4230f89307d16235395a261235d62a3ce70cce3c4a021546c9f6fa65dd61ad3:eyJzZWxlY3RlZExpbmVDb3VudCI6NjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliNjJmNjBkODU5MGE1NzljZjQ2ZjhkNjczNzhjNGM1NzJiOTYyY2VjY2RiOTBjN2E1ZjdiNDJiOTYwNzgyYTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2YjA0NDkxNDY5NzIyZTgzNjNhOTRlNDA0NDUzOGUwMTNhMmEyMTdlMzZiMWU1NjhiYTYwYWNiN2I0YzhmMmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI1ODU0MjgyNmI0MTRjY2MxZWYyYjFhYWViZDM4ODlhMjhkYmFkMjYxNDc4MzM0YzE0YzZmZDAzMTQzMGU5MzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdhYTYyYTE2NTVkMDA5YjAwYTA3YTI5ZTFmODE4ZjY2YmFjOTQ4NmJhZjFkMjRiZmUwNmE2YzViOTQ2YWY2OGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c49b85694a1f4aeaaaa8382351bda066",
+      "statement": "TypeName provides symmetric boxing/unboxing conversions for primitive types with Void as a special case.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeName.java#L165-L204",
+          "version": "repo-lines-v1:sha256:d7a9a82bc1c7043cd13e7e9d9104172465e18b8c1e7a52ba0798c0a29da3ea7c:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExMDk0YmVhMmYxZDYwYzcwMjVlMWMzOTlhODU1ZGZkNDc1YzU1ZGY3ZmNiYjk2OWNjZmFhZjY3M2YwNjhlNzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMxMjBlOTkzZDQzMjI1NjcxMDlkNDQ4N2E0MDRhODMyYWZhY2FkNjMzZDVjNDgzNmE5MTVkYmNjMWFhZjkyYWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3OGI2ZGIxNTMxZjkyMmYyNDI4YTAxNDQ1NDk3NmYwM2Y5ZDU2Mzk1YTg1MTNlZDY4OGQwNjRkNmQ4ZDUwYTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4NGQzMDBlNDA1OWI5ZmU4ZThjYzQ4NzdlYmE1ZWIwMjQyMTU1NDRlMjRjODhhODgzMTFkMDJiNzRhZDJmYjQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c4d2e63067534b989685f9aea93bdfa5",
+      "statement": "TypeVariableName represents generic type parameters and supports bounds via getBounds(), enabling recursive types.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeVariableName.java",
+          "version": "repo-file-v1:sha256:42ee5bf519d5a23dace7b62d47a8c8648e241ece364c06ac90a2d31bd4d33bd8"
+        }
+      ]
+    },
+    {
+      "id": "claim_9a4b338b914f4b418508230830899a71",
+      "statement": "WildcardTypeName models three wildcard forms: bare (?), upper-bounded (? extends T), and lower-bounded (? super T).",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/WildcardTypeName.java",
+          "version": "repo-file-v1:sha256:7f80605e2d21f13febf0d874dbb47bc1076808ec3c014a17f7520087aaef5460"
+        }
+      ]
+    },
+    {
+      "id": "claim_ebbe3ec955554d35b94d9e3c70c165ab",
+      "statement": "ArrayTypeName represents array types (T[], T[][] etc.) with a single component type.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/ArrayTypeName.java",
+          "version": "repo-file-v1:sha256:353e4506213f68ab4f69128b6ebbc8f45536560f7fdd76df8eb2e447409ab0b1"
+        }
+      ]
+    },
+    {
+      "id": "claim_6873e7d1a1104c55a7242f9bd522d273",
+      "statement": "TypeSpec integrates with CodeWriter to emit Java source code including imports and proper indentation for all declaration kinds.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeSpec.java#L186-L406",
+          "version": "repo-lines-v1:sha256:7ac533effc173b8de2af07fbb275152f68e6c48e1328102ac6bd22812dc6a1ce:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIxLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwYWE2YmIzNDExOWNmNDA1MTMwM2Y2MWYyNWZmY2UxZDQxZjhiOGEwZGMxMDgyODJmYmM1MzU4ZDUwZGMzOGVmIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI4YmM1NDUyNDEwNzE3ODRmM2RiNDA4MTQ0YWIyMzg4ZmU4Yjk0NWI3Nzc1NTUyOTJmM2U0YzQ1ZmFhMmE3YTJmIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3MDZkMTYyNTFmNmI3OGIwZGI1MWI2MTM2MjcxMGE0MWQ5NDJjMWI5ZTkzNGVlNzcxMzlmZWE1ZGY1Y2JjYWIyIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIzYTE2NDRjZDU3NTgzYTA0NzI4OWI3MjFiOWNkODdjYWRmNGNhYzI1OTExMTFlZjEwNWZlNDEwNDM3MjgxMjFhIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_4bc09edb5ac4464d9f60cd987115d543",
+      "statement": "TypeName.get(Class) reflects a runtime Class object into the internal model.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeName.java",
+          "version": "repo-file-v1:sha256:94e9c9651dd369425bebe85ec654dd862834597500fe89a7ab4c3f6343857483"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-22T02:45:45.818Z"
+  }
+}

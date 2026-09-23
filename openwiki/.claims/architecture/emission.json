@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:809c6f99a99644560b6b739fa088233f50757afe87f77e03b4ea402bb917518a",
+  "claims": [
+    {
+      "id": "claim_6b5501b2bdca4ccb8acaa26641699933",
+      "statement": "CodeWriter implements a two-pass algorithm where import candidates are collected in importableTypes during traversal, and suggested imports are computed after the full pass via the suggestedImports() method",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java#L15-L209",
+          "version": "repo-lines-v1:sha256:8616710d8df6b02398dc104443526936e138973ec398752c6e1205db34629e8e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTk1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI5NzJhNDI5MzgyYjJlMTQ3MThlMGUzN2IwNTcwYThhMTcwMjk5MWZjZDg0OThjZDg0MDYwYThiZjRmMDUwMTdiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJhOGNhMjVhOWQ5ZTY1ZjkxNWM1OWU1NTE0MmMwMzFlZTZjMjYxODc3ZTY5NjAzYzc2NDYxZjllODdkMjZlODIyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI2NGQ0NmFhMTNlZTMwYTgwZTBmNDIzY2I2NTIyZDFkMTVkOTJiNmQxMGI0NWVmNGE4NGNiMDU5YmRkMWE2N2ZkIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI4ZjIxYmMxZjIzMjVlOWFlMjQ1YzhiMDU4MmVjZWEyN2IyOTY1OTNmYmVlYjY3ODI4MTM2Y2Y1NTJiY2VmNGVmIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_dd880458f2b54be0acaa528f735e6575",
+      "statement": "Import collection uses importableTypes for types that cannot be resolved through existing imports or scope, and referencedNames excludes same-package classes from suggestions",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java#L15-L209",
+          "version": "repo-lines-v1:sha256:8616710d8df6b02398dc104443526936e138973ec398752c6e1205db34629e8e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTk1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI5NzJhNDI5MzgyYjJlMTQ3MThlMGUzN2IwNTcwYThhMTcwMjk5MWZjZDg0OThjZDg0MDYwYThiZjRmMDUwMTdiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJhOGNhMjVhOWQ5ZTY1ZjkxNWM1OWU1NTE0MmMwMzFlZTZjMjYxODc3ZTY5NjAzYzc2NDYxZjllODdkMjZlODIyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI2NGQ0NmFhMTNlZTMwYTgwZTBmNDIzY2I2NTIyZDFkMTVkOTJiNmQxMGI0NWVmNGE4NGNiMDU5YmRkMWE2N2ZkIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI4ZjIxYmMxZjIzMjVlOWFlMjQ1YzhiMDU4MmVjZWEyN2IyOTY1OTNmYmVlYjY3ODI4MTM2Y2Y1NTJiY2VmNGVmIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_b2f6702c41614398a4a16b58a18527be",
+      "statement": "Name resolution via lookupName() checks nested types first, then top-level class name, imported types, and finally falls back to fully-qualified names when no shorter alias is available",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java#L371-L414",
+          "version": "repo-lines-v1:sha256:9cd482870e43c0561f83282888d97d462bbf7dac921fb306d90785904e3b6c41:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmMmEyZjk5NmYwOGU2ODBiZDI5MjEzNWE2ZmE0OTc4YmRhMjZlNjAyZDg0ZjMzY2IxZDU5NDc3NWQ0MzA0YjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk3ZDg2MzJlNTRlOTI5OGFiYjk1ODcyN2UyZDUxNDA4YWJhZjEzNjYwMzUzNzkxMDE0MGFiZjY1YjMwYWI2MTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5MWFhY2Y3NzU1ODkwMTQ3ZmFhZWU2NmE5ZWVjYjE1ZGQ1OGJjMTE2MjUxYjNjZWExZDhlODc0Y2IyY2JmNmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b6312239da2f486b88fce562dd1b904f",
+      "statement": "Indentation is managed through an indentLevel counter with lazy whitespace emission via emitAndIndent() to avoid trailing whitespace on lines that would otherwise be wrapped",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java#L467-L509",
+          "version": "repo-lines-v1:sha256:96b3dd45f288712c9ee6cf7145d6d993b4b3280006bec0b7d26a00d0598e6660:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmMmEyZjk5NmYwOGU2ODBiZDI5MjEzNWE2ZmE0OTc4YmRhMjZlNjAyZDg0ZjMzY2IxZDU5NDc3NWQ0MzA0YjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlYTAzYjk2ZjRkMDUyNDhlNzViZjg5OTYwZTk0NWJiMmFlYWRjMTU2NGEyZTYxYmZhYzA4MGE5YmY4ZjAwZjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEzZTliMGExNzI0ZTg3ZTk0M2FlNjczMzQ4MWQxMTYwNzI2YzViODE0MDg3ZThmNDU5MTllYzM1OWQ5NWQ4YjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4365264d4003406fafcc4304155d0c4a",
+      "statement": "Multi-line statement continuations use double-indention (indentLevel += 2) when a newline is emitted while the first line of a statement is active, tracked by statementLine == 0",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java#L484-L509",
+          "version": "repo-lines-v1:sha256:65d0e25c605601d43b1f75c04fec017b39d6958b27e03ff4a1f25a0970ce8eef:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwOTU2MTg3MDMzZmU2ZjdlYzNjYzI1MzExYjY3N2FhYmZlMzEzNDUxYTFkMWFjZTk2MzJjZGQ2YmIwZTIyOWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA3YTNhZmY0ZmUwN2NkOTcxZDY0YjZmYmI5NjZiYTI1ZmYxZDg5Y2NkN2NiZmM3NmViYzNiZTJmZTAzNWFjYzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEzZTliMGExNzI0ZTg3ZTk0M2FlNjczMzQ4MWQxMTYwNzI2YzViODE0MDg3ZThmNDU5MTllYzM1OWQ5NWQ4YjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_17a8cc36662d42ef84d36230aeb0260f",
+      "statement": "Format token $W calls out.wrappingSpace(indentLevel + 2) which defers resolution to LineWrapper; the wrapper emits a newline with indentation when wrapping is required, otherwise a literal space",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java#L296-L304",
+          "version": "repo-lines-v1:sha256:18cee67a02fb86a76a5f08d620b6af8b2f5201688c9ca9cd83eb3fc9f649e76f:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGZjM2U5YzI2ZjM5ZDRjMDMzZmIxODc4YWJjMzFlZWVjZTIzZWUzNDQ4MzIzMzgyZTc0MzYyMjQ1MjMwY2ZlYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmM1NDI1MDhjOGNlOWE1Yzk1NTEzNmI0NDViMjMyMjllZDRjOTg2MTRjYzc1M2I1YmFjNWUyMWRmNTI1NTc5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTRkMTlkNDUwNzljZmFiNDI1YmJkNjg4MDVlNDA3Y2NjMTM3YTlhYTNiMzgzNmIxOGY1MGY1ZDc0ZjY5ZmI0YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzg4YmM1MjMwY2UzOWQ4OGMxYzdmNzJhN2Y3MzFkZjdiZTZiMmY5MDc0ZDk1NmZjYjBhMmVkM2M5MDA5NGQ2MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_520c714bf8344177843728c73da824e3",
+      "statement": "Format token $Z calls out.zeroWidthSpace(indentLevel + 2) which defers resolution to LineWrapper; it emits nothing when there is no text on the current line, otherwise a deferred empty flush",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java#L301-L304",
+          "version": "repo-lines-v1:sha256:264ee3e02aab1f6e3b90c34919a6510dd38eb284c321bc3307ac0231a9b0c60d:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTM5MGZmZTkyOGYzMzJjYzViZDdkOTJhNzkyMzRlYzA1Nzk0NzE3NzNjYTc0ZWI1ZDE5Y2NkZTQxYmMyNjY0YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmM1NDI1MDhjOGNlOWE1Yzk1NTEzNmI0NDViMjMyMjllZDRjOTg2MTRjYzc1M2I1YmFjNWUyMWRmNTI1NTc5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODQxM2EyZWJkMTFkYjE1MjY2ZDljM2EzMGIyNjUyNjM3M2FmZmNiNmM1NGNjYmVkYzViNTQyYzhlYTBkMDM3OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzg4YmM1MjMwY2UzOWQ4OGMxYzdmNzJhN2Y3MzFkZjdiZTZiMmY5MDc0ZDk1NmZjYjBhMmVkM2M5MDA5NGQ2MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d3faac5af7ab4acca16fb6d2fb154fd2",
+      "statement": "LineWrapper implements soft-wrapping via a buffer with FlushType enum (WRAP/SPACE/EMPTY) to defer whitespace decisions until the column limit is reached, then emits newline+indent or literal space as appropriate",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/LineWrapper.java#L26-L170",
+          "version": "repo-lines-v1:sha256:3873b0ca5c90be987830df15d041ad90199b0a28aa1e227788b432ce20cb22de:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQ1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJhZDcxNDE3NDg1YzEzNWRlMmFiN2JhMjA4ZGI0NWZiMmNkMjM5YjBkYTlkNTM4ZTRkNThlMDFhNDFkMWM5MTM5IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIyN2U1Nzg4ZDVkOWQ3M2QyNGE4MWRiYzBhNWE3NGJmYTgyYzljM2IzYWY5OWU1MmFmNzk2ZTkwYjQ2OGE4YTNkIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI2NTFiNzQ0Njg3YTA2YmNhZWI4ODIzNmQwZjcyYjRjYmY2Mzg5ZTY0NWNlOGFiNTY0NTNjZTk1ZDYwNGQ4ODAyIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MSwiZm9sbG93aW5nQ29udGV4dEhhc2giOiI0MTJjYTM0NWNjZjc1YmY5YzA4MDZiY2U2OTViZThkZTgwOGI3OTk4NDI1MWE3YTU0ZDIwMmNmNjEwMWRkNDUxIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_74725a0f683443739dcc7d747c37fb77",
+      "statement": "The suggestedImports() method produces a LinkedHashMap by copying importableTypes and removing referencedNames, preserving the insertion order of newly-discovered imports",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java#L519-L524",
+          "version": "repo-lines-v1:sha256:a20b793745a578d530e0b575ebe9f9f751f158d0f029800fbef7e1731689f205:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWU3MTEyN2Y3ZjVmMTcxN2I5NmU3ZTk3NjkwYTdkMTgxYTUwNzIzN2ZjYWQxODg0MGJiYjA5MzQwMjJhOTIwYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTZjMTdhY2RiNzBhMzdmYTc3YTFjZWQxZGQxMWE1N2RkZGQ4OTNiNzI0MGM2ZGVmMmIxY2Q1NWRmZjRjNWFmNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjIxMTgyMzk2MWM0OTNlZjVmMmEyNDEyYTY0ZjIyMmMzZmRkNThiNDhkMjcyY2Q1NmQzMDM1MTRlZmZiYTc4MCJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-22T02:45:45.818Z"
+  }
+}

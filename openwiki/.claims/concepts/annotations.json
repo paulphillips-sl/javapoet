@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:8a8a06a169f2f102eddfee9fb3ba4abadc1bfef65b49fab9d130b0a3c7c897e9",
+  "claims": [
+    {
+      "id": "claim_4ff658632b5e469eb60205231319176d",
+      "statement": "AnnotationSpec encapsulates both the type of an annotation (as TypeName) and its member value pairs, serving as the canonical representation consumed by CodeWriter for source-level emission.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/AnnotationSpec.java",
+          "version": "repo-file-v1:sha256:11c705a612adea403097a5988dd3790be0815c6e485d79f9f20070ba9b4f8ccd"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-22T02:45:45.818Z"
+  }
+}

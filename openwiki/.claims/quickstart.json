@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:6a43c5f7b8a0693b55ba2a9fa04dd7ff3608a8873fa25841c83e627f8bc24b04",
+  "claims": [
+    {
+      "id": "claim_266e261457ef49f89630cfa8cb30cd07",
+      "statement": "TypeSpec is the core domain model for Java types, containing fields for kind (CLASS/INTERFACE/ENUM), name, annotations, modifiers, type variables, superclass and superinterfaces, enum constants, field specs, static/initializer blocks, method specs, nested type specs, originating reflection elements, and always-qualified names.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeSpec.java",
+          "version": "repo-file-v1:sha256:c750e1988351104ed08e1c1c4ee67ded6da71073dd954103fc87e363c5230c57"
+        }
+      ]
+    },
+    {
+      "id": "claim_1f128d586df140a9b2294980cac32075",
+      "statement": "CodeWriter uses a two-pass import collection algorithm: the first pass collects all needed imports using a nullAppendable sentinel (a no-op output target), then the second pass writes code with resolved imports based on what was collected.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        }
+      ]
+    },
+    {
+      "id": "claim_6707f0a3a29f4ae080095c0ecf3674e3",
+      "statement": "The format string engine uses $L for literals (no escaping) and $S for quoted strings. The placeholder $T references types, which triggers automatic import emission.",
+      "evidence": [
+        {
+          "resource": "repo://README.md",
+          "version": "repo-file-v1:sha256:77f861703d12ec802224ff2f098c78b0e17edb56f891ddd3634dadf735aa996d"
+        },
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java",
+          "version": "repo-file-v1:sha256:d37bfd04070cf632a2d447ed85427a14b249de75db7f1a7eb0a313f721e276c2"
+        }
+      ]
+    },
+    {
+      "id": "claim_3aeb3e052e6f45db93a9910543785fad",
+      "statement": "JavaFile automatically creates the complete package directory hierarchy using Files.createDirectories() on each package component when writing to disk.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        }
+      ]
+    },
+    {
+      "id": "claim_d8a6fbaf931e487ba438a6891f636542",
+      "statement": "All file writes use UTF-8 charset by default; JavaFile.writeToPath() explicitly uses StandardCharsets.UTF_8 for encoding.",
+      "evidence": [
+        {
+          "resource": "repo://pom.xml",
+          "version": "repo-file-v1:sha256:b7601a2b8fa2bb08c599fea578478453b91915a3696217afb97b640cbe6f2332"
+        },
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        }
+      ]
+    },
+    {
+      "id": "claim_4adc523be7ce43c19d8cc220da967b25",
+      "statement": "Nested types' simple names are collected into always-qualified name sets that prevent accidental shadowing when emitting code, especially important for nested types like java.util.Map.Entry.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java",
+          "version": "repo-file-v1:sha256:d37bfd04070cf632a2d447ed85427a14b249de75db7f1a7eb0a313f721e276c2"
+        },
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        }
+      ]
+    },
+    {
+      "id": "claim_ae322ca78ac14aab8b7d85474e986c6b",
+      "statement": "JavaPoet validates argument types eagerly at builder construction time using checkArgument and checkState utilities, failing fast with descriptive errors before any code is generated.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeSpec.java",
+          "version": "repo-file-v1:sha256:c750e1988351104ed08e1c1c4ee67ded6da71073dd954103fc87e363c5230c57"
+        }
+      ]
+    },
+    {
+      "id": "claim_70c79b901200477d8b281db6f49aedc1",
+      "statement": "The CodeWriter's NameAllocator resolves types by finding the shortest suffix that matches, considering local type names (for nested access like Map.Entry), imported types, and always-qualified exceptions to prevent collisions.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java",
+          "version": "repo-file-v1:sha256:d37bfd04070cf632a2d447ed85427a14b249de75db7f1a7eb0a313f721e276c2"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-22T02:45:45.818Z"
+  }
+}

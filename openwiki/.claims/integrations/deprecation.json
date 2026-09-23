@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:fe5f6583596e600bffb01e30a29b699a6d6db370db6cedcbec46f1bd28f2f961",
+  "claims": [
+    {
+      "id": "claim_d918636c76b4417c9c0e282cdc514670",
+      "statement": "Square's JavaPoet is deprecated as of 2020-10-10",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L14-L15",
+          "version": "repo-lines-v1:sha256:86b35ce01581dfc140012519c676c0590f0b2df1d35089159559fb9d1334ad69:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2M2MjVkYmZlZTc2N2ZiM2JkNjA4MTgwYjJlMzNkYjk3OTU5Yzk1OGM1NDc4MzQxYzk2M2YzMjA5OWUyMzM1MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2JkN2I4NmE2NTM1NmQ5OTNhYzIwMmUzZDUyNTM5MDBlNDYwYTYxMzc1NDY1ZDM3MDA1OWY3MmU1NWVjZGYxYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDc4ZGEzNWNlMDgyNjMzNzg2NjkxYThhYmI4MzE1YjE1OGYxN2Y3ZTAzNTU0Y2I4ZDljMjZjMmUxOWQ0Nzk4YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWZkYzMyMTQyYzMyM2E4NWRhYzdiMmVjYzU3M2I3NDVlYTVkNmE0OWEzZDZkMDc1NWZiMWM3N2FhN2EwMDQ0MCJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-22T02:45:45.818Z"
+  }
+}

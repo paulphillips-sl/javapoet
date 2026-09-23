@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:7d18f0443a225b86f7727870bb86222b2370fc7f402988404fec212a12283753",
+  "claims": [
+    {
+      "id": "claim_349746aa10d54da5b62832fc2431227b",
+      "statement": "MethodSpec is an immutable value object that represents a complete method or constructor declaration, including name, annotations, modifiers, type variables, return type, parameters, varargs flag, exceptions, inline code body, and optional default value.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L18-L76",
+          "version": "repo-lines-v1:sha256:821dd2f1b892cd25bb7fb7298de96f71b3a419eb87d8f18c3633c99a2bd4b0e5:eyJzZWxlY3RlZExpbmVDb3VudCI6NTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUxMmMyMjUwOWZkYjUxZWJlOWZlZGFmOGJhNThiZDFkMjIyMjA3ZjYxNDcyZGIyM2RkNjhiMTZiMmIxYWMwNWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQzYWM2Y2RhYTQ5MmM1ODA2OTM5MjUxODI5NmU3OGNlZDc4MGQxNjQyNTA5NWFlMDE2MzNjNTc5ZjAyNGZjOTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM3M2U5MzRhNmUzNDE5NzM1OGQzMjUzOGE5YjhiNGQ2Y2U1MWE1ZjMzYWNhZGI1NDRkNDJjZGU1MzNmYzI0MzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ef7570bd4d7249aa83471df9e0566a47",
+      "statement": "MethodSpec is constructed via a fluent Builder pattern through factory methods `methodBuilder(name)` or `constructorBuilder()` and becomes immutable upon calling `build()`.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L189-L203",
+          "version": "repo-lines-v1:sha256:786bbc99cc29b8698675b175dbd8c8b0a58e4d290f277b66521edb3bad54503c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlNzExMjdmN2Y1ZjE3MTdiOTZlN2U5NzY5MGE3ZDE4MWE1MDcyMzdmY2FkMTg4NDBiYmIwOTM0MDIyYTkyMGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY1NmU1YWNiODY4NjUzNGE0ZTYwNjExZWQyMGExMzc0YmQ2MjlmYTMzYTVlYWMyNjhmODBmZGFlNmMwN2E1MjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNjOTc2ZWQ4YWVkYTY0ZTYyNzRjYTVlZDI4N2NhMTZlODZiNTNmZmJkZGFjYTM1MTk1YzIzZWYxODQ4OGU1NzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_21773a877a7d45348e944ba7911b2d56",
+      "statement": "Constructors are identified by the special name \"<init>\" and cannot have a return type; attempting to set one throws an error.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L45-L76",
+          "version": "repo-lines-v1:sha256:f245a5b7ccb1d7238e499338ae3c952a8fe45994d7b0dc97331d43134826ed68:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM4MTJhNTE5MDFlM2Y0ZmMxMjE0NjkwY2E3OTk1NWU3MjlkMWUxNjQ3NTEwNjVjMTIzMGIzN2ZmNjFjODZkZGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM3M2U5MzRhNmUzNDE5NzM1OGQzMjUzOGE5YjhiNGQ2Y2U1MWE1ZjMzYWNhZGI1NDRkNDJjZGU1MzNmYzI0MzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_284b3e45ba3f4e4dba6f3cef5362fe74",
+      "statement": "Varargs methods require that the last parameter be an array type; this invariant is checked during construction and violations throw an exception.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L62-L64",
+          "version": "repo-lines-v1:sha256:0b9fc99d2583e4a472576c51c05455fbc322d15939662fb5eb5a7fd586aff6ed:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGI3ZmQ1MDA2MjI2ZTBhM2RjNjJiMTQ2MzczYmI2NGRhMWY2NjI1ZDg4ZmM2NTcwMGIwOTRkYzdkZjAxMDM5OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTlhNjcwYzZmYmUyOTJjNjQwZTdmNjE1ZjhmYWQyYThkOWEwMjgxM2ZhZWQzNWQ0MjU2NmVhODcxOTI5ZjZmZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWY2YTEwYzcxZWJmMTM5ZWZkZGM5MmNkYWY2ZTQwMDAxZDJjZmUwOGM4OTBlZjJkOTE1ZmRhNjUxMzIyYjkzNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_019ffb5c10d84b1482161f2031d7490d",
+      "statement": "Abstract methods cannot contain inline code in their body; the constructor validates this invariant and throws if a non-empty code block is present on an abstract method.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L59-L61",
+          "version": "repo-lines-v1:sha256:a9a670c6fbe292c640e7f615f8fad2a8d9a02813faed35d42566ea871929f6fd:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjM2MGQ0ZjlkOWY0Y2Q2NGE4NTMwYTZkNmJkM2M3MzZjOGUzZjE2NTVlNWM2Y2IyZmIwMWVmYjFlZGM1ZTAxMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTU5NGQ2MTI4ZWI3ZWFkZTFhOTRiZWM3N2Q2NmRhZWM2Yzk5ZTk0YzM4ZjAwN2E4Y2RmODgzYjk0NTg0NmI3NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDYzZDBiNTcwYjhlODk0Nzk0ZGQxMWJjZTkzMWY2MmUwODhkZjk1MjYwNDlkNWJlZGZhNjE0OGY5ZDA5MmQyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGI5ZmM5OWQyNTgzZTRhNDcyNTc2YzUxYzA1NDU1ZmJjMzIyZDE1OTM5NjYyZmI1ZWI1YTdmZDU4NmFmZjZlZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3c5cc32c59074ce4922d98be2706d208",
+      "statement": "The static factory `overriding(ExecutableElement)` copies metadata (modifiers, type parameters, return type, name, parameter types, throws declarations) from a reflected method but does not copy annotations; it adds @Override automatically.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L243-L270",
+          "version": "repo-lines-v1:sha256:ce9ecd6cfb9458812d298f370e13b18419852ef1ff12169626de98808ce5e72e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJmMWU4NjdhMDJiZmZiOGIzZjAxOTYyMWE1YTc0MTdhZDI5YWE4NzYxYmM4Y2VmMzM3YjQ2ZWE5NzQ1ZDc2YTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjllMmQ3YWMwOTdmODEwNzM3ZGIxMzlhN2FmOTExZjkyM2VmYjMyNjRkNjU5NzcwNmU2OTYxNjJmMTEwNDFhYmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_24e19c3ee4fa44bfb57b2183758b95b9",
+      "statement": "Overriding a method on a final class, or one with private/final/static modifiers, throws an IllegalArgumentException.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L206-L213",
+          "version": "repo-lines-v1:sha256:17136ddff1db0fb651782a2d692f7ff1b9cfd7386a6a886f659a6e089567aaf1:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTI4MGMyMzBhNzlkMmJkMjg3ZDExYTU0MjA4OGJiOWQ5NjFhMzNjNjQ4YTUyMDYzNjFlNGZjMWJlZTM3YWMzMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTM0NzgzMmM4NDJkMWYyZmEwYjRkZjkzNDA1NGE4NzNmMjQyYjFiY2RkNTQ1ZDIzMWIyNmVmNjlhMTlhYzVmYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODE2M2RmMDlmMzI4M2EwYTE5NjRhM2ZlNDQyNDE3OTgxNjI3N2JhNmZjNjY2NDgyZmEwNjMyNWRlYzZhYWMyZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6a56001fdd4940b6866653d1d856437e",
+      "statement": "The `emit(CodeWriter, enclosingName, implicitModifiers)` method produces Java source code by emitting javadoc, annotations, modifiers, type variables, return type and name, parameters with comma separation, closing parenthesis, optional default value, optional throws clause, and then either a body block or semicolon.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L83-L141",
+          "version": "repo-lines-v1:sha256:48f60d5387fcbf6df5c949c13f070cfb7391ad214afebba88f91998cb70781fd:eyJzZWxlY3RlZExpbmVDb3VudCI6NTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUyZmQyZjEyNDJmYzNmYWE4ODRiMWM3MGVmZDc3ODhmNTk0M2FhNTQwZjAxN2UyNTZmYzQzYTQyNmJmZmIwZWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVhMjhhYzdmMTkzYTIxNzBjZjhjNDE1YmVlM2IyMDA0ODkwODE2OTIxMDM0OGUxNDg5OTJmZWMzYzE5NzRiYzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU1YjMzM2NjNzRlOGNkM2EwYjY4Nzg3ZDQwODg1OGQ3MWY0ZDMzMDI0ZWEyYTY5NzU0ZTZiYTVkOWNkYzQ0OTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a71f1015065b40a0a504b04d69168f46",
+      "statement": "The `overriding(ExecutableElement, DeclaredType, Types)` variant resolves all generic type parameters to their actual types so that the overridden method's signature is concrete.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L270-L308",
+          "version": "repo-lines-v1:sha256:d12e7d1ae82609a813bcec3f841e5b34f09422ea1d11cd65cdf6a1bf00145b3b:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBlZDUxODk2ZTk3OTU3NzNhYzhhZjg2OWE5Y2E3ZWNhNjhlZmNhNWQ2YTA2MGVmN2NjM2U0ZDdkNGYwMDdiYTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAyNzNiMzkyOGNmZjBjOGQxMzczMDhjNjQyYjc2MDVmNjVmMTBhZTU4MGNiNzRkNWQzZjUwYmE0NmQ2YTQ0M2YifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a68b718772ee4897b0c5a4fd9358ec79",
+      "statement": "Parameter annotations from a reflected method are not copied when using `overriding()`; they must be added separately to avoid incorrect retention.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L251-L253",
+          "version": "repo-lines-v1:sha256:c65be695eeb5dc41f314d9a9f85174ace0c3a9586cd7b925d83f340e9db6f65a:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTE2YzIyZTY4YWU0YWNmMDYzZWZiNDZlN2I3Y2RkMzcxZjBiYjY5MmQ4ODlhM2NkMzMzODE0YmY4ZTdiZDRhYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTUyZmYwMWZlMzliYTVjNmQwODYwY2E4MTZjZDQwY2VlNGMyYzNjNWUyNzc5OWZiYWVhNGE4YjA2YTE5ZDE4NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjcxNmZhN2E0NTczZDA1N2U4MDEzYTQ4YmQ2MTBmNTQyZjUwNDc3MjdkOTliZmFjYzdmNGZkZGYxNjAzNmJjOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGYzNmJkMjc5YmIzZjFlMzM5NGJmOGJhZGIzNjJmYjAxOGJlNmI3NGM4ZjdkMjlhOTM5MDgyN2RmZTU2NGNiNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_17db4ce92f0745919ff23eeb250847ac",
+      "statement": "Duplicate exception declarations are deduplicated in the spec, as evidenced by tests showing that adding the same exception multiple times results in a single declaration.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L61-L64",
+          "version": "repo-lines-v1:sha256:e6a573f37cf560314747f235f559201d9dd52d74af2604bc5b7567ba39d92066:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTU5NGQ2MTI4ZWI3ZWFkZTFhOTRiZWM3N2Q2NmRhZWM2Yzk5ZTk0YzM4ZjAwN2E4Y2RmODgzYjk0NTg0NmI3NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODczZTk0NDY4NWI3NWNkMzZkNjA2NjI0MTc1NzlmYjU5MTJlM2JiOTIzYmU2ZGNhYTliNjgyZWU3NWU5ZTg0MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWY2YTEwYzcxZWJmMTM5ZWZkZGM5MmNkYWY2ZTQwMDAxZDJjZmUwOGM4OTBlZjJkOTE1ZmRhNjUxMzIyYjkzNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bf28196e80024471bb36d2afab519db5",
+      "statement": "The Builder's `toBuilder()` method returns a fully mutable builder containing all existing members, allowing modification of an already-built spec.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L280-L292",
+          "version": "repo-lines-v1:sha256:ed82db4bd9667d61561ed7a8942e51e4a440a1c47bd42e4e57649d93c5c27d83:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjM2YwYjI2YjAyYWFmMWY3NTRjY2M1MTIxZGFmMTllODQ5MmVkNmRkZjdjMzVhMDc5MmEzYWRlNGQwNGYyMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMxZjAwYzkxZThiYjVlOWRhYjRhZTI3MjdlZGY2YTE2YTBmMWIwMzkxNTkzMzZlMzFiMDhjMDQyMTU2MzIyZDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdkODk5MjA0M2RkZTkzZmQ2ODkyMGQ2ZWM5MzA2NzUzNzdmMmQwZDY2YTNjYThiZDhmZmE4MDJkZDgyMjYxYTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c700d6a16c5f42d684ea6c39ab78a46f",
+      "statement": "The Builder's `addModifiers()` rejects the `FINAL` modifier for parameters since it is not a valid parameter modifier in Java.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/ParameterSpec.java#L190-L192",
+          "version": "repo-lines-v1:sha256:38560db9d38e411c0a392692ac9e35b675a821b54446f0bb1b6978eec4ef25c1:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWNiNGRlYzczZWI0M2Y5NDBlMGZkOTcyMzg1ZTNiOGRlMTJjZWY1MTllMDMyYTRlM2RlNjk1NjE1MjY4MTFlMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTZiMDQ0OTE0Njk3MjJlODM2M2E5NGU0MDQ0NTM4ZTAxM2EyYTIxN2UzNmIxZTU2OGJhNjBhY2I3YjRjOGYyZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWE5MTJlMjM3MTdmZGVkZWJmMGMxZmI2YTFlMTg3YTNlN2YyN2NlNTQ1ZDFiNWY2MmM1ODA1ZDhmODViMThlNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWI1MTc1ZjgyMWE3NzNmNjc5NGM1Y2Y3NDU1NzJkYmNlYmRlMmFjODk1MDA1MWRlNjU3MzU0Yjg4NmZjZmY5YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e3c0ed01d6084aae9932eea108f11972",
+      "statement": "Javadoc emission for methods without method-level javadoc includes per-parameter `@param` sections directly after the `/**` tag, while methods with javadoc place parameter javadocs on subsequent lines.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L83-L141",
+          "version": "repo-lines-v1:sha256:48f60d5387fcbf6df5c949c13f070cfb7391ad214afebba88f91998cb70781fd:eyJzZWxlY3RlZExpbmVDb3VudCI6NTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUyZmQyZjEyNDJmYzNmYWE4ODRiMWM3MGVmZDc3ODhmNTk0M2FhNTQwZjAxN2UyNTZmYzQzYTQyNmJmZmIwZWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVhMjhhYzdmMTkzYTIxNzBjZjhjNDE1YmVlM2IyMDA0ODkwODE2OTIxMDM0OGUxNDg5OTJmZWMzYzE5NzRiYzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU1YjMzM2NjNzRlOGNkM2EwYjY4Nzg3ZDQwODg1OGQ3MWY0ZDMzMDI0ZWEyYTY5NzU0ZTZiYTVkOWNkYzQ0OTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4dc5fd4761d94901a8da977f7df6629e",
+      "statement": "Control flow constructs are emitted via `beginControlFlow()`, `nextControlFlow()`, and `endControlFlow()` methods which produce correctly nested block syntax with optional condition expressions.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L469-L522",
+          "version": "repo-lines-v1:sha256:15ae9eb0fee475d0a56ac4956856ecf3a1f4e1da12f06ddb1b7730be46fd5b99:eyJzZWxlY3RlZExpbmVDb3VudCI6NTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhYTdlMGY2YTEyODYwOGE2ODNjMzBhODdjYWEzZWEyOWQ3YjhkMGM2M2ExNzkzNWM2NzQ1MjliNGY4Y2E3ZmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlMmI5ZTIxZmRjODZmYzJjMmVlNDQ3MjE4NWQ2NzY0NjdiZGQxY2JmMmUyNGI0ZGM2NDRhYjFhYmIzMzI1NDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIxMjdlMDZmNTNjMWMxZjFhNjQzYTFlYzgzNTI3M2Q1MWYwZjBkMzcyODZjZGY0NDE4ZWIwOTBjZjE0YmU1ZTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b125b8368bc44844bdb78cd62daa318e",
+      "statement": "Trailing newlines are managed by the CodeWriter; inline code blocks without trailing newlines receive one, and existing newlines are not duplicated.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L469-L522",
+          "version": "repo-lines-v1:sha256:15ae9eb0fee475d0a56ac4956856ecf3a1f4e1da12f06ddb1b7730be46fd5b99:eyJzZWxlY3RlZExpbmVDb3VudCI6NTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhYTdlMGY2YTEyODYwOGE2ODNjMzBhODdjYWEzZWEyOWQ3YjhkMGM2M2ExNzkzNWM2NzQ1MjliNGY4Y2E3ZmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlMmI5ZTIxZmRjODZmYzJjMmVlNDQ3MjE4NWQ2NzY0NjdiZGQxY2JmMmUyNGI0ZGM2NDRhYjFhYmIzMzI1NDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIxMjdlMDZmNTNjMWMxZjFhNjQzYTFlYzgzNTI3M2Q1MWYwZjBkMzcyODZjZGY0NDE4ZWIwOTBjZjE0YmU1ZTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3e64723523fb4e02a6a755bd2880b292",
+      "statement": "Type variables in the method signature are emitted as `<T, V>` before the return type and name, then managed via a stack during code emission and restored afterward.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L90-L142",
+          "version": "repo-lines-v1:sha256:4adfe4444d3103b2a0832c5fc4c3aa84866c2d0c67a676fc9c21fcf179959421:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjNTJhMTE0YjFkMDRhMWU4ZDYwZWY0MTMzZTAzYWIyMzUzMGUxNDQ3OGIxNTliZjE5YmFjYTQ1ZjQ3NTQ4NzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg5MDdkZmRlMzQxODFjMGEzYTExMWE2ZWExYWFlZmZhZjdjNzA0Y2M1N2I3Yjc1ZTRjMjI1NTM0NDc1ODkxYWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY0NjY4NGI1MGM3MTEwYjZmMmFjNzQwMjFkOWRmMTE2ZTcwZTUwNmYwODYxZGFiNTlkNWQ4OTZmN2VkY2ZlYmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c69bbfe7e4294088b480cc7590f71e0e",
+      "statement": "The `default` value is only emitted when set and non-empty; it must not be set multiple times (throws on duplicate).",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L462-L470",
+          "version": "repo-lines-v1:sha256:22ca2b623a94e17be1e3f8b3b7ad218d14f1599aa1d779bb35e02236fb04e93a:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGEyY2U1MWZmZDdjMDE5YjZlOTdmYzAxNTY2ZmUwMjY2M2Y0NzU2ZmViMTllODUyMWJiMWY5NmU2Y2VhZTMzYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzc1M2RhMzQ0OTQ4OGE3NjhjZTdmYWZmM2FmZTNmZmFmNDJlMmM3YmNjNGI4YWNmZWJkMTdjYjdmNTEyMjhiMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWFmYjUwMDA3NDVjYWIyZjhlYjdlMzE5YjJiYWU2ZDUxODNkNWIwYWZmZmQ5ZTQxNzY3ODAyZDM2ZTYxZDllMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGQwYTljMTk1NjQ2NTYyMTdkOTczZmY0NTgxZjNlNDAwYjAyNWQxOWI0MDBjYWVmNWQ5YjEyMGU1ZGIyNGU3ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3671f7109af34bdc8a971d614b7896a2",
+      "statement": "Null values for collection parameters in the builder throw `IllegalArgumentException` with descriptive messages.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/MethodSpec.java#L59-L61",
+          "version": "repo-lines-v1:sha256:a9a670c6fbe292c640e7f615f8fad2a8d9a02813faed35d42566ea871929f6fd:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjM2MGQ0ZjlkOWY0Y2Q2NGE4NTMwYTZkNmJkM2M3MzZjOGUzZjE2NTVlNWM2Y2IyZmIwMWVmYjFlZGM1ZTAxMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTU5NGQ2MTI4ZWI3ZWFkZTFhOTRiZWM3N2Q2NmRhZWM2Yzk5ZTk0YzM4ZjAwN2E4Y2RmODgzYjk0NTg0NmI3NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDYzZDBiNTcwYjhlODk0Nzk0ZGQxMWJjZTkzMWY2MmUwODhkZjk1MjYwNDlkNWJlZGZhNjE0OGY5ZDA5MmQyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGI5ZmM5OWQyNTgzZTRhNDcyNTc2YzUxYzA1NDU1ZmJjMzIyZDE1OTM5NjYyZmI1ZWI1YTdmZDU4NmFmZjZlZCJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-22T02:45:45.818Z"
+  }
+}

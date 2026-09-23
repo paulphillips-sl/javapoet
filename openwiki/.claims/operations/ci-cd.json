@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:43a8223daaa7c4ebcb8d11be271bcc64614604cb18b9b8cc5530c8bc8cfc1eea",
+  "claims": [
+    {
+      "id": "claim_68cc715608d044ad876f8a9e81ae40aa",
+      "statement": "The build workflow triggers on push and pull_request events",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/build.yml#L3-L4",
+          "version": "repo-lines-v1:sha256:289b8d7e429e517329e6982932d0d1df721467927f195c5331119ba7b31d95ce:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzM2OTdmNGQyNTJjNDQwZWY2NGFmMmFkZjRjYjYxYTFhYzA1NDcxYWY0NTkxMDQ5ZTlkNTNkNThmYmRkYWVjOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOWQ2Yzc0N2M2YmFkZmY0Mjk0YjkwOWViZDgyOWNhZWI1MzM1NWRkOTFhZTMwOTJlZmU1OTRkZDMwOTI1ODU4MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjQxZjNhZGUyY2UxMGQ0ZjY5OTA3OTJjN2FlNDBhMmIyNjY2Mzg1M2RlNDI4M2ViY2UyZDNjMjgwYWU2Njc4ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0418c31f2fbf4844b3afdc431e2c1250",
+      "statement": "Deployment to Nexus/Snapshots is restricted to the master branch of the square/javapoet repository via conditional guards",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/build.yml#L18-L19",
+          "version": "repo-lines-v1:sha256:c9cb9dc70e99bfb9a9b0b1a96c6a785fe21e502bb75ac6014bd12c566d4d1501:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjc3YjIyOGU0Njk3MGQ5MTNmMjliZjQ4NTcwM2QzOGFlN2EwMjYyOTkzMmMxNzY1YjAxZjQwZWI2ZDBjNGUzNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTA0MWJkMWI0MmI1Nzc3MmI3OGU3MWRkNDUzMDcwYWQzMGU2ZjBhYmU4NjEwZWU4ZTUxNzNlMmU5MWZkN2Q5YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzQwMmU5YjQ5NTIxZGU5MmVhMGY0YzQwOWI2MDczMzkzMmNiYjZiNWIzNzQ2ZDdlYjIxNTBlOTg2YjcwZDE3NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fc3dafe32cd042bfb4f3223b6717af31",
+      "statement": "The build workflow uses Java version 8 (Java 1.8) for consistent compilation across all runners, as declared in pom.xml",
+      "evidence": [
+        {
+          "resource": "repo://pom.xml#L23-L26",
+          "version": "repo-lines-v1:sha256:9578fe7579b40020f056b31fdb727d05bd80c43fe97665b6162d8f66214d9cd4:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTQxNzhmNmU5ODViYmJiNmY1NTRlNzI1MzAwYjU4OGI1NjBmMWZjNDFhOGIzYWI3MzhmMTQ0MGU5ZWFmZjkxYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODZhMzM1ZWE3OTM1MDBmNzIwOWUxMDkzNTU0NWZmYzRhZTMwMzc1ZDgyYzJlYzFiNWVlY2I0ZjhiMDk1NzhhNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTZkNDk2ZmE0NTdlOTBmYzBkOTNmYTJmZTE2MGI2YTM0NGM4YzM3NWE1ZTI1MGYyYzc0M2MyYmZlOTE2OWM2ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTQxZTA4NjZjNjcyMWMyNzkxYTMyMzg3ZmI4M2Y1ZWE0YzY5NDJlMTMxZDA5NDhhZWI0NjQ4YWI3NTBmMTBjOCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_52a22ca6c4e44f40ab21d45c5526b44d",
+      "statement": "Nexus/Snapshots credentials are injected via GitHub environment variables referenced in settings.xml; plaintext credentials are never stored on disk or in the repository",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/build.yml#L18-L18",
+          "version": "repo-lines-v1:sha256:f77b228e46970d913f29bf485703d38ae7a02629932c1765b01f40eb6d0c4e35:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjc3YjIyOGU0Njk3MGQ5MTNmMjliZjQ4NTcwM2QzOGFlN2EwMjYyOTkzMmMxNzY1YjAxZjQwZWI2ZDBjNGUzNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjc3YjIyOGU0Njk3MGQ5MTNmMjliZjQ4NTcwM2QzOGFlN2EwMjYyOTkzMmMxNzY1YjAxZjQwZWI2ZDBjNGUzNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzQwMmU5YjQ5NTIxZGU5MmVhMGY0YzQwOWI2MDczMzkzMmNiYjZiNWIzNzQ2ZDdlYjIxNTBlOTg2YjcwZDE3NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTA0MWJkMWI0MmI1Nzc3MmI3OGU3MWRkNDUzMDcwYWQzMGU2ZjBhYmU4NjEwZWU4ZTUxNzNlMmU5MWZkN2Q5YyJ9"
+        },
+        {
+          "resource": "repo://.github/workflows/settings.xml#L4-L5",
+          "version": "repo-lines-v1:sha256:61072ef8ee28caca89b03844b83c7e7de644c086dcaa2ceced6b9788f8ae3fac:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTAwZmE1YzIzY2FiNjYzODRlOThjOTYzMTg4ZjIxM2IxN2E2YjEwOGNkOGEyNjFiYzMwMTBlNGI1NDIxYmExMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGNhZjA0ZTM1OGM2ZDJjMTIwNmQ0YzA4ZGIxMzEyNGI5MGFhYjVmNDhiY2Q4YzY3NGM1Yzk3YzgzOGM5M2Y5NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTQ3Yjc0NTdhYTQ1MDdiZTQ5YWYzMDBjMGJmZmM1YWVlMmI5Y2Q4M2E0YjcxYmIxM2FkZjUyNzk2ODQwN2ZhMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODQ5MDM4NTNhMWQwMDA1MDM3ZjZmMjI5OTQ5Y2YzOGYzYzkwNmM3ZjQzZThiYmIyZWI5MDgwOWQ3NGIzMjVlNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_28fbd85dbe8c4346a9ac12c5de6d256a",
+      "statement": "The OpenWiki update workflow runs weekly at 08:00 UTC via a cron schedule rather than on code change events",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L5-L6",
+          "version": "repo-lines-v1:sha256:f36cee49c6e238f211f2083a343115cac960f6f0a20373461c48102a255ed149:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTI4ODQwYTZiN2U2MDMwM2Q4N2JlNGQ0ZDgyYTUwYjMzMjg0MjkwZGVjNGUzNDI4ZDQ3ZDkzZmJlZmQxYzU5MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTNhZWQ1MDJhNWFkZWU3YmIwY2FkZDQ2Y2Q3NDYzYjUzMjBjNmNjZWU0NDgwZDY2ODU0ODg0MzEwNjM3NjExOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmU0ZThjMDA4MTAzNTk2NGZhNzVjYWVhZDFiZjA1MTIxYzlhN2U3NmUxZjNmZWIyZmQ5MjBkNjI1OTJjMjZjYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzk0NjJkNWYyYzIwN2U2YjRmODI4NDNkOTE1NGZmMGJiYWQwMzQzOTI0YjJjM2M0YmFiZDk5Yjg3Y2NkNGI4MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7d2fd40f4fc14ee794ea75611ae85be4",
+      "statement": "OpenWiki requires full history checkout (fetch-depth: 0) to properly diff HEAD against the last documented state and produce meaningful change summaries",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L18-L24",
+          "version": "repo-lines-v1:sha256:ee66271dc317cbb536b208daaaca7972f7c2c660d37dfbea7f8669707ff7081b:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGIzMmI5ODcyNjNkZjIxNjNlNzI2ZDQ4YjkyZjZmOTY1MTQ4Y2I2YjZkMjgzMTc5MTUxNGM5MzlmODM3YTE0MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzZkNzEwYTE3NjI4OTVjZDRjOTNjNmEyYTI5ZTYyOTI0ZDZmNzMwZDk1ZTJhZDE3N2NhNTA0OGViNTY5YzlhYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTAyNjA0NWMxNzkzOTAzMDU1YjNhZDVjZGFiNGE0ZjVmMDQ3OWExNjBlNzc1Y2JhZmY2ODlhNDc1YjVlZGY1NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTE3YTA0YTcyN2NjNjgwM2FiNWUyNzY3YjU2NTAzZGU0ZDhkZGIxNGU2YjEwZWNlN2M1NjA2Y2Y4YmEyZTdlNiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d2b9fd69f8304a438d10c5b2c7e5d93c",
+      "statement": "The build workflow enforces a quality gate where all tests must pass via mvn verify before any artifact is packaged or deployed",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/build.yml#L16-L16",
+          "version": "repo-lines-v1:sha256:eea4adf99681556b556eb881800224540995f97043881dbcb6f65a29570829cc:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWVhNGFkZjk5NjgxNTU2YjU1NmViODgxODAwMjI0NTQwOTk1Zjk3MDQzODgxZGJjYjZmNjVhMjk1NzA4MjljYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWVhNGFkZjk5NjgxNTU2YjU1NmViODgxODAwMjI0NTQwOTk1Zjk3MDQzODgxZGJjYjZmNjVhMjk1NzA4MjljYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2I0ZjkwZGI5MjdhMGFmMDA3YjkwYzdjMjk5OTY2NzA1OGI0M2M3N2E3ZDhiNWE3MzZhNDY0N2YxMTZhZTIwZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTIwNTFjMTI2YmU0NDdiODZhMWM1OWM2ZWZhZDM2NTlmNjRmMjA0MDg5YTA3NmFlZTAzNGM2NzQ2MDNmNDgzYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c1c7a3e29409453d84956a9809b3c416",
+      "statement": "The OpenWiki step runs with continue-on-error: true, intentionally allowing incomplete pages during long-running updates so the PR creation step can preserve partial progress",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L35-L40",
+          "version": "repo-lines-v1:sha256:89faeb05726fa4a210dcca5f185cd254ffb2db0ec8fa023a78bb0b730cdb90d4:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGY1NTBjOWIzM2NmMzhhZjJjM2JjMWE5NGQ0ZmFhNjE2N2UxMTY5OTYxNjhiYTJiMzcwYTBmNjQxN2RiYjNmOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDNlNDIxMWMyNzhiYjU0OTA4ZTc1ZDlkYjUzZTg1MjQyOTQyZDM3M2QxYmJhYTYyYzRiNDU4MjlmOTNhZDgzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTM3NjlkMjkyYWFhMDBjMmQzZDAyNzBkZmM5MjIzODZhMGRlNGRhMzhjOTA3MDA1NThlYjIzMmI4ZGIyYjdiNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzNiNzk0MTdlMzIxYzk4OTkwMzUwOWRmMWQ4MzEyYWQwZDgxOTNhYzFhMDVlYTg2MjM2MDlmOTY2YmExYWY4ZSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-22T02:45:45.818Z"
+  }
+}

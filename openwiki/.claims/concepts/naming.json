@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:1853fe212c1b0827ded6dafb95a48f2445b9d07e5d7ce2658f7c3866f65f7448",
+  "claims": [
+    {
+      "id": "claim_583a9e06696a419492fb631ecf4363bb",
+      "statement": "The NameAllocator class is responsible for assigning unique Java identifier names to all code elements during generation, preventing identifier collisions by appending underscores when conflicts occur.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/NameAllocator.java#L18-L76",
+          "version": "repo-lines-v1:sha256:c331d4e7bbdc712b2c7d0b6d2185be5c11c531bf61d1c04804b594b1cdbad2ff:eyJzZWxlY3RlZExpbmVDb3VudCI6NTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlZTE5ZjFmMDM5YmZhNzhkMDRmNzkyMzkyODYyZWVjOWRjOGM0ZWJiNDEyMDJkN2IyYWJhZjhkOTRmYTM3M2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyM2NiNGMxM2Q2Nzc1OWQ1NGY3NjcxZDQ0MDM0OTcyZDA5MDNhMzlkMDhhZmFlNzNiYjk4MWViOWFiMGRjZjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQzYWM2Y2RhYTQ5MmM1ODA2OTM5MjUxODI5NmU3OGNlZDc4MGQxNjQyNTA5NWFlMDE2MzNjNTc5ZjAyNGZjOTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZhYmUyNzQzZGNmNjQ5NDBlZDkxNDEyNDYzMDU4ZGYzMzk1ZTNiMTcwOWQzMTA0ZWI4Njk3ZTJiYTc4ZTM0YjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_93673c1ad0034cf98ccfc52bba8986ac",
+      "statement": "The NameAllocator maintains two data structures: an allocatedNames set to track all issued names and a tagToName map to associate each unique tag with its allocated name for stable lookup.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/NameAllocator.java#L79-L84",
+          "version": "repo-lines-v1:sha256:587047b39b53d56f0515b11c4761013d5fecd8b51076ada55f746a5cf94e61ab:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzM1OThmMmI1NGFjYTBkOGZlNDEzNWEzMjg3MDQ4ZjJjYThmMDAyOGI4ZDUzNzdhYmIwZmZmZjBkZmYwNjZkNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzNkOGE1YTNhMDUxYzg3MjA0MGM5ZjA4ZmYwZGIxODNhNzBiZTA0MGE2MWY1YzQ5ZjY3ZWRjMWY3NWJmNDYwNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzk4YjNiOWY1MmIxMDViN2E3ODYyMjIzNjlmZjNmNmU0ZDYzNjE1OTc4N2FiZWYxYzdiNWMwMWJlZWU5ZmJkYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2cffd17fbd804aef960e5824e53f79f8",
+      "statement": "When newName(suggestion, tag) is called, the suggestion is converted into a valid Java identifier using toJavaIdentifier(), which prefixes with underscore if the first character is invalid but part-safe and replaces all non-part characters with underscores.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/NameAllocator.java#L128-L143",
+          "version": "repo-lines-v1:sha256:0e313588a20266a097a65b6b7e8824124c3c89422e37b0d4fe8cfcd3ad980bc9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4MzI4MzY0OWRiYTVhMGRjYWU0YmUwODUyNWIzMzNiMjRlOTlmZGE1MzgwYzA2ZDJjZmMxODYyMjAxMjljMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZlNTRlMWQ4NmQ3ZWQ0MjU3MTc2ZDE1YTNiZGNiZDIyZDFmMmExZjE1ZmEzNTJlNGU5Nzg4YmVkYjUyYjMwMTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkzNTQzNzFhZWVkODkzMzMwZjdjZDg4YWRmMzA3MjZlZDUxZmE2MDZkNjg1ZjQyNmY1YjRlYmVlMTM5ZTk1Y2EifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_46c3985170414f97878a4d2e9dfee9f2",
+      "statement": "If a suggested name is a Java keyword or already allocated, NameAllocator appends an underscore and retries until a valid name is produced.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/NameAllocator.java#L112-L126",
+          "version": "repo-lines-v1:sha256:ebc341194a0babf53150bcd90d16ab26d5bd7b652dfdb69dad7552be9c1a76fc:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjNWVlNWY0MTdjMTdhYjU0ZDQ4NWY3MmUwZjg0NTNiOTBmYTJlMmViZmVmZmYwYWYyYmM1NGQ1MWFkYzcwNmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY3Nzk5ZDgzYThiNzQ4Mzk3MmI2YmZiNDQ0ZjBkYzJlYjhmODlmOWU3MmJhYjI0YTEwMDQxMjA0YWIzYTc3MWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU3Zjk2ZmZmM2M4Yjg2YThlZjU0MTNmNWY1MDhkZDdjNzFiMTU5YjQ0NzliMzJlNWJkYmJmYWI5YzIzZmEyY2YifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d808f4804878403aac399a253b798957",
+      "statement": "Each tag can be associated with exactly one allocated name; reusing a tag for different suggestions throws an IllegalArgumentException.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/NameAllocator.java#L120-L123",
+          "version": "repo-lines-v1:sha256:b18ac18424e656ec82da32526d6b05d31abba5263fd85d55d5f1f6382cb9404e:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjFhYzk5N2M0YmEyNDZiNzFjMjFjMjUyOWMxYmIwZjAzMjgwMWEwYjVhMzViMzBkY2FhMmMyYTEwYjAzODNkNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjdkYjgwZjg0M2E2ZDE3ZGRhNDAyYWQxMjA4ZDZjYmI1ZWVmM2Y1ZjUwNWFjMmE4YjllMjEzZWU2NDJhZTEzMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTY2MWQ4MzRiNTVlMzU1MjFkMDdiOGY0N2M0M2QwMDI3NjY1OWMzMjQ5NjI1MWY2MTQ5ZmU4YWY4ZTA4NTFkZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_55cfdd8dbf3f4ebaad17797d974cbc49",
+      "statement": "NameAllocator.clone() creates a deep copy with its own independent allocatedNames set, enabling correct name resolution in nested scopes without conflicts.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/NameAllocator.java#L85-L91",
+          "version": "repo-lines-v1:sha256:2fe865a2ab6dcd81eeee59083b30532bf5527a6e57d12922a38b43a8c46fc415:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzNjN2ZiMmFlOTU2OGNkZDRhYjAwOTM1YWRlNjAxNDIyYTkxZTU0MDg4YzE5ZGY0MzJhNTI4MzgwNTU1MTEzNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDM0MmEzZTA5NzMyNmRhNWMwNzE5ZGNhYTQ2OWFkMDFlNmUwZWI3MGNkMGRhZTNkNWYwM2NjNGM3NDYyNTQ0ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTg1MTlhYWFmNTc5MTU5ODFjYTliNDA3ZTA2ZmVlODhmMDAzYmNmNzgwMjA5ZDZmNmRiZjU3YjQ5YzQ1M2VjYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjUwZmQ5MDU2MDkyYzM2Yzg5NzZiNTYzODQ3NTA0NDY1ZmU3ZmVlNTFmZjVmNmY5YjZiZDgxYWIxZWE5MTAzNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f1dc1b762e1c4848abbb2e87d8b09ef6",
+      "statement": "The TypeName abstract class is an immutable value object that represents any Java type reference including primitives, void, and composite types, implementing equals() and hashCode() based on the string representation.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeName.java#L31-L54",
+          "version": "repo-lines-v1:sha256:639e621436b62598b4b0399bcd86398377b8accbdccf6522e465c8661ea51b67:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc0NjNiMDBmOWUyNDcwMDM5ZGIxMzBiYzI5NGRhM2IxZDZlMjM5YWRjZWZkM2MzNzFhZmU4YTI5MjE1ZDI1MmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyM2NiNGMxM2Q2Nzc1OWQ1NGY3NjcxZDQ0MDM0OTcyZDA5MDNhMzlkMDhhZmFlNzNiYjk4MWViOWFiMGRjZjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYxMGFmODNmMWIxNGY1ZjE4ZWQxMDJiYzk2ODIzMjQ3YmI0ZmVmYThjM2IyNmMxODYyOTkzMTA5ZjU3ZTUxYmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM4MTdhYmRmNjk3Y2I5NWUxMzkwMjU1OTJlYTYxZmU0MjkwYzcwYzBiZjBiZDlhZDdhM2E2MzBjMWNmMmQ5ZWQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a580c09af82a4f74a87d5f47425b7100",
+      "statement": "ClassName stores a packageName, enclosingClassName, simpleName, canonicalName (fully-qualified name), and reflectionName (binary form) to represent fully-qualified class references.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/ClassName.java#L39-L46",
+          "version": "repo-lines-v1:sha256:2e576256308849f0f49f7ad96a335cc32b33b3567797290e7e41bd73464e970a:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmYzMDFiODc0N2M3NTU4YWMxZWUyZjVhNjg1NTlkZTMxYjFiYjZmYjlhN2I3NjljOTFlMTg3Y2RiMDMwNTE2MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTdkNTMzNWJmMmJmYjA2NmY1ZDQ1NGIwNDJlOTQzOTcxYjY1YTEzNjk2NDQyMDc1MjdmZDBmODk0ZGU2NWUwOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODY2M2FjNjE0YzljODc4MDY3MDgzNjA5NzZkNTU2OTFjY2FmMzdiYjA4OGVkZGE2MTRhNTRiYTM3NTgwY2ExYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWMxNDBkMDg1NjZmOWU5MGY2MGFjM2I5NTc3ZDdkOWEyZWZiOWRjYWQ5OWYzNjQ1MjI5NDI4MTliMDA2MDY2MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_63623fc9804142878f7a86982b575a7e",
+      "statement": "ParameterizedTypeName represents generic types with a rawType, list of typeArguments (non-primitive and non-void), and an optional enclosing parameterized type for nested generics.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/ParameterizedTypeName.java#L32-L40",
+          "version": "repo-lines-v1:sha256:8dfe70b316b4e1d097721928cc4b2be92bcf40087375f7f0228fd32312fa097a:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTBmYzJlNDk5ZGUzODdmOWUxMDM3ZTFlMTBjNjdiOGFmNjc0ZjNkMGI2ZTMxYWM4ZjU1YWQ1MWE1MGRiZDk1ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzk2YzZjMTJmYTI1NjU1ODVjZDBlNDljNjAwMDIyMWMxMzRmY2NjODBjY2YzMjdiMTRkMDBhNDI3MzFlYjFiMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDllOTMxMWRhYTYyYjcyYzQ0ZDQ2MjgyMDljNWVkZWZlODllMDAwZjU4Y2Y2YjUxNTQxMjQxOWExM2YzNTE2ZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5784099a79754da4af17231d8254fcc4",
+      "statement": "TypeVariableName represents bound type parameters with a name and list of bounds; the constructor validates that no primitive or void is used as a bound.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeVariableName.java#L36-L42",
+          "version": "repo-lines-v1:sha256:a4592225a7938d5b2f7b1802da3cfc21a70381bf31b5d6aa226b66dbc8fbba89:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjc1YzJjZjUxMWEyZDdlNTIyM2IyYzY2OWFmMjM3OTA2NGYwNTlhZWJhNDg0M2Q5ZDJlOTE4NDIyZGMxMDczNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmJkZGRmN2YyYmZjMTcxZWVhN2RhZWJkMTNkN2ZkMWE5NzEyNmIwODQ1ZjA2NjhkNTk0NzJkZTg2NWVjM2Y5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDg2YmRhNzZhZTRmYmU5N2E0NmE0NzViYmFiMjdlNWRjMDVhNmNlMWQ1YWFkMDM0ZTQwOWM2NTRlNjRiNDFmMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODkzYTc2YTYzNmNjOTFlMjI4YzRlYWZkYWZkNDZhODYwZTU0NjQxZjQxOGE1NzViNGE1NmM3MTA0OWEwMDgwYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1fef0e10e9fe484a9bcb029d42834b75",
+      "statement": "WildcardTypeName represents wildcard type references with exactly one upper bound and optional lower bounds, enforcing that both are non-primitive and non-void.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/WildcardTypeName.java#L35-L46",
+          "version": "repo-lines-v1:sha256:70081fd7b7a96a63b2de27961b54cd3429f8eee5a91424e522a88608f5b4c6e6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5NDkyNTNiNDg5ZTUyZGY2Mzg1Nzc2NGUyYmQ0YjBlMWJiMGE3YjVjYzJiZDMyYzczMTRjZTg1MzUzNzAxZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4NjZiYTJjNWFhNDVmYWY0NjUzYTc3ZjVmNTI2MTBmYTQ5OGZhNDNhYmVhMDM0YjZkZjk3NzFjZGJjMTE1NGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk4ZGMwZDcyYTM3N2NhMmU1MWQ3YTMyN2RmYzQyMmNlZjc3OTBiOWM2MjBkOWExYmIyYTM1ODdiNTA4MTVmNjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzZGVmYjM3NGNlOTI1YTdjZGZhZGI2MWIyMmIwOTAwZDAxZmRlM2Y1ZGI3ODM4Y2JmNTcwNDJkYzg2MDA3MjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f48c0125c44f41b0b29b951ade3167c2",
+      "statement": "CodeWriter emits type references using the $T placeholder, deferring emission until the next token to check whether a static import should be inserted based on the current staticImports set.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeWriter.java#L264-L306",
+          "version": "repo-lines-v1:sha256:1e5815cf763644efcc9a512e1d4ae3a0955d94ec94c47432ec47613df7b82666:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5YmZlNzg4MzkxNGUwZGEyOWU5MmZlMWNhMWUwZTRiMTAxN2QzZjJjZmQ3NzYxMTI4NzYxNjBlMDQ4ODJhMTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImViMjc1M2Q3ZWI4YTAyOGM5ZWIxNjViNTQwYmRmOWY5YWZiZmY1ZjcxZTY0YzU2MGE3NDhkNmMxMWE3NjA4ZDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcwYjliOGI4NTIwY2Q4ZWIwYTIwZDI2MzY1NzFiODQ3YzQzYTBkYTA2NjhmMGNmY2VkODc4YTJkNDY5YzhkZjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3MWIzYmJiZDAyYjY5MzEwZDI2ZTZhYzE4OGM5YzlmZGE5MjdmODYwOTJhMmZlZTY5ZWY0ZGViZmQwMzk1NzIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d5fe313259af4a1590772f3e7d354e1c",
+      "statement": "The code emitter system supports placeholders: $L for literals, $N for names (with collision avoidance), $S for string literals, $T for type references, $$$ for literal dollar signs, and $>/$< for indentation control.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/CodeBlock.java#L40-L63",
+          "version": "repo-lines-v1:sha256:9abcae27f24a11a59aefe1a587fe86310d01218e642b1a7eeb8c15b8da62c16b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYyM2NiNGMxM2Q2Nzc1OWQ1NGY3NjcxZDQ0MDM0OTcyZDA5MDNhMzlkMDhhZmFlNzNiYjk4MWViOWFiMGRjZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5YTMxYWU4NmExZTFhYmI3NzIzZDBjYWUyNjYzZmE5ZjgzZTY5ZTJjODk1MDVhN2U2ZGRiMzY1NzljZWQxYzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRkZWFkYzliN2Q0ODAwYTg5NjJlNTBiYzAzZGViM2I4NDUyNGQwYzk4Yjc5YmI5NDY3ZTE2MmU5YTZkYjVjNGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFhZGI2MzI2ZWNiODkwNzcyY2NjZmJkOWEyOTgxMTQ2ZjQ3ZWE1ZDkzMjdiMTdkODMxM2RlNTliNWU2MTA1NGUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_511990bfe84f4d768ddcc6d3fc4986cb",
+      "statement": "TypeName instances are immutable value objects that implement equals() and hashCode(), making them safe to use in collections and as map keys without worrying about mutation.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeName.java#L104-L116",
+          "version": "repo-lines-v1:sha256:4aced31fe06f6bcfd0974bfbbaab00ff06659cef65b2380a52ad6b2dfee76c17:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI3ZTU3ODhkNWQ5ZDczZDI0YTgxZGJjMGE1YTc0YmZhODJjOWMzYjNhZjk5ZTUyYWY3OTZlOTBiNDY4YThhM2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1NjFjOWY4ZTQwOTM2ZDJhN2U3OTg2MmNiODVlOGZlNzQ4ZmRkYWU5YzYxMjM3NDRhZTQ1ZDQxZDEzN2EyYzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA0ZDdiNmZjNjkxYjk0NjZiZDg0YTc0ZmYzNjgxYTJkMTk3OGEzYTU4NGVjNzEzYTk5OTFjMzQ2ZjFkMGY3YWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg3OWQ1YTc2NDZkNWVjZTViYzhmNmRiOGFmNGQ0MTk1MDcwNDdmMDA0YzUxMzk2OWIyYjRjNzFlNjA4NDI3YjEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a8b4ebcc1b664f079dcf2336c890702b",
+      "statement": "TypeVariableName's internal helper strips java.lang.Object from bounds since <T extends Object> is equivalent to bare <T>, simplifying bound representation.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeVariableName.java#L75-L80",
+          "version": "repo-lines-v1:sha256:f167d289410dad68d3fde245a927f6e78617f4b49d0fc65d378365edcb227a5d:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWE2MTM5Y2U1NDc3YTg5NGQ5YjY4YzM1MzczMTg1MDNjNGRlNjBkYTViYjRiZTA2ZGMyZTliZmZhNGFkMzRiZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2FjYjg0NzhlNzMxMDcwOGQ3NzI5MmIzMDE2ZDhiNTY3NjVkYTAyMzJmN2E1ZjZiN2M5ZDRiNWNjNzhkNDAzOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjc5NzE0M2IzZGY4NWYwOGYzM2RkMzlhMWY2MjRkYmM5NmQzYmQ1MDE2ZjBiMzExNzI5YWYxMGE3NGM1NjA0NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_691ada4ea13f412b91532a5c7dc7a9b1",
+      "statement": "WildcardTypeName emits '?' as shorthand for '? extends Object' when the upper bound is Object and there are no lower bounds, following Java convention.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/WildcardTypeName.java#L67-L80",
+          "version": "repo-lines-v1:sha256:4b0194a03adca8ac03d84477545af9190a0ee2e15f4d6381bd3a19fd106d28c8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlYmY2Yzg3YjFiNGZhODAwNjE5YzE0NDUxMzcwY2Q0NmY2OTBjNWI1NDBiNmU0YWJhNjk5MTFjYmE4MTcyYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA4ZThmMTU2N2RhYmMzYWNmYzg2YjNiOGY0MmJjMzE2Y2RjMjdhNDAyODMwYzA4YWQ5YzIxNzNjM2Y3NGE2ZDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlYmQ3NjQ3ZjVmNjJlMDAxYzBkNjYzNjgwZTk2NmNkYWQ3YjQyN2U5Yzc3NmI5MWY0NWIxMDYyNDExZGE5ZmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_37fc235311f447a4b5547008f3f9029e",
+      "statement": "Boxed and unboxed primitives are represented as separate TypeName instances (e.g., TYPE_NAME.INT for int and TYPE_NAME.BOXED_INT for Integer) with boxing/unboxing conversion methods.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeName.java#L69-L102",
+          "version": "repo-lines-v1:sha256:98ad683f440c7138e7b473f4bd5aa7ad544c40ff1c9a5d37ac71640b61f0e282:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2ZDg0YTY4NzYzNzhlNjU3MWYwZTg0ODczMTdlYjJjYTM2NmYxMzNiNmE0MDM3NGJiODRlMDhjN2JkOTc4OGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJlYmI1MGU2MWY3MmU0ZDU1OGRjYzA0NWE2ZGVkZTNhMjFlYjQ2NDliYWFmNThhMmVhMDA0MzM0Nzc5MDk5MTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM0YjFkNmZhMjY3YjA2ZGQ4NzEyNTgzZTM5MjAyMmFmYmVhZTcwODUxMmUwY2YxOGNiMzgyN2YxNjg1ZjUyN2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE4NjU2OTZhMTU4MDNlZTIyNTU1OTNkNmM1M2ZlNWRiYWM3MGNhNTM3NzY5NmY2OWY4NzIyY2NjZTQ5MzQ0MzkifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-22T02:45:45.818Z"
+  }
+}

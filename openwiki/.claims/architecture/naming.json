@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:8ca2b099711452db424864a7235bf852f64eaca8315eb75da62f8a42d6cae8e7",
+  "claims": [
+    {
+      "id": "claim_4b6410e0caa9466b8fcc33699756a776",
+      "statement": "The NameAllocator class provides a context-scoped mechanism for generating Java identifiers that never conflict with existing names or reserved language keywords, using tag-based allocation and suffix-based collision disambiguation.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/NameAllocator.java",
+          "version": "repo-file-v1:sha256:ce692da91e539b64d33ea0ba76fac827d8cd304898f4f6a552e0f2e606109590"
+        }
+      ]
+    },
+    {
+      "id": "claim_121e84167c884a5283af1881da6d92bc",
+      "statement": "NameAllocator.newName(String suggestion, Object tag) validates the suggested name via toJavaIdentifier for character normalization and keyword protection, then appends underscores until a unique identifier is found.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/NameAllocator.java",
+          "version": "repo-file-v1:sha256:ce692da91e539b64d33ea0ba76fac827d8cd304898f4f6a552e0f2e606109590"
+        }
+      ]
+    },
+    {
+      "id": "claim_72bf8f3df49547f8b35e46398d41a021",
+      "statement": "Each tag must map to exactly one allocated name; attempting to allocate a second name under an already-bound tag throws IllegalArgumentException with a descriptive message.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/NameAllocator.java",
+          "version": "repo-file-v1:sha256:ce692da91e539b64d33ea0ba76fac827d8cd304898f4f6a552e0f2e606109590"
+        }
+      ]
+    },
+    {
+      "id": "claim_a339920012f74124b0d7098ee16ec327",
+      "statement": "TypeVariableName.bounds are stripped of java.lang.Object during emission since Java syntax omits redundant extends Object clauses.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/TypeVariableName.java",
+          "version": "repo-file-v1:sha256:42ee5bf519d5a23dace7b62d47a8c8648e241ece364c06ac90a2d31bd4d33bd8"
+        }
+      ]
+    },
+    {
+      "id": "claim_152501c96dc34e158f8164798064bb1f",
+      "statement": "WildcardTypeName emits fully qualified wildcard syntax: '?' when no bounds exist, '? extends X' for single upper bound, and '? super S' for single lower bound.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/WildcardTypeName.java",
+          "version": "repo-file-v1:sha256:7f80605e2d21f13febf0d874dbb47bc1076808ec3c014a17f7520087aaef5460"
+        }
+      ]
+    },
+    {
+      "id": "claim_2b134f78ff634bf3bdcc0c2a25fb399e",
+      "statement": "WildcardTypeName construction enforces that upper bounds are non-primitive and non-void, and exactly one upper bound is permitted per wildcard type.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/WildcardTypeName.java",
+          "version": "repo-file-v1:sha256:7f80605e2d21f13febf0d874dbb47bc1076808ec3c014a17f7520087aaef5460"
+        }
+      ]
+    },
+    {
+      "id": "claim_c362edf24623448e8173cf730e88fb04",
+      "statement": "NameAllocator uses LinkedHashSet for O(1) collision detection and LinkedHashMap for tag-to-name mapping, preserving insertion order for deterministic iteration.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/NameAllocator.java",
+          "version": "repo-file-v1:sha256:ce692da91e539b64d33ea0ba76fac827d8cd304898f4f6a552e0f2e606109590"
+        }
+      ]
+    },
+    {
+      "id": "claim_8a44998c32eb4ef78efaca05d3897ddb",
+      "statement": "Character normalization via toJavaIdentifier prefixes '_' for invalid start characters (digits or non-starters), replaces invalid intermediate characters with '_', and handles Unicode surrogate pairs.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/NameAllocator.java",
+          "version": "repo-file-v1:sha256:ce692da91e539b64d33ea0ba76fac827d8cd304898f4f6a552e0f2e606109590"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-22T02:45:45.818Z"
+  }
+}

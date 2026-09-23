@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:6f654210bff0ddd50a528f7e2f4f7e94bbedef8273b1d90b9a23aae15a1363a2",
+  "claims": [
+    {
+      "id": "claim_8c9b62950604429b900d89290bdff066",
+      "statement": "JavaFile automatically constructs standard Java package directory structure by splitting package name on '.' and resolving each component, creating missing intermediate directories via Files.createDirectories().",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        }
+      ]
+    },
+    {
+      "id": "claim_5eb0c5ca4f04464c9baf805f73699fdb",
+      "statement": "JavaFile enforces UTF-8 encoding as an invariant; host charset and explicit charset parameters are ignored in favor of StandardCharsets.UTF_8.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        }
+      ]
+    },
+    {
+      "id": "claim_989181a4889e452eb0beee7d1d21135a",
+      "statement": "JavaFile uses a two-pass approach with NULL_APPENDABLE as a sentinel Appendable for the first pass to collect import information without writing output, then performs a second pass through a real code writer.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        }
+      ]
+    },
+    {
+      "id": "claim_68cd70b8a40c4659aeb8b2794e91b7dc",
+      "statement": "writeToPath(Path) and writeToFile(File) return the actual destination Path or File to which source was written, enabling callers to verify output location.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        }
+      ]
+    },
+    {
+      "id": "claim_a6cb0fd26dd147fa8bba9e1687152606",
+      "statement": "writeTo(Path) and writeFile(File) return void; they perform identical directory creation logic to writeToPath/writeToFile but do not expose the destination.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/squareup/javapoet/JavaFile.java",
+          "version": "repo-file-v1:sha256:66bbaf6c24386fdf62e4f2e65941aae3fece9fe6dd66f0073c942ddfb2b9641e"
+        }
+      ]
+    },
+    {
+      "id": "claim_d17783b248314147b7887ef40a83aa85",
+      "statement": "JavaFile throws IllegalArgumentException if the target path exists as a file (not a directory), preventing accidental overwrites.",
+      "evidence": [
+        {
+          "resource": "repo://src/test/java/com/squareup/javapoet/FileWritingTest.java",
+          "version": "repo-file-v1:sha256:2cbf104e77ebf65c3f29fd795b1f53cd2507a274c0e3333be0d5bdca1f63494f"
+        }
+      ]
+    },
+    {
+      "id": "claim_f417fff36eb0412aa8ce2ae96ccc9996",
+      "statement": "Files with empty package names are written directly to the target directory without creating subdirectories.",
+      "evidence": [
+        {
+          "resource": "repo://src/test/java/com/squareup/javapoet/FileWritingTest.java",
+          "version": "repo-file-v1:sha256:2cbf104e77ebf65c3f29fd795b1f53cd2507a274c0e3333be0d5bdca1f63494f"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-22T02:45:45.818Z"
+  }
+}

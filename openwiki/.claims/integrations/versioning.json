@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:835934a03c1a7b5b93eb0fe22e82dfa7d73a8bd1ef6a96a7db166dcc968dcf01",
+  "claims": [
+    {
+      "id": "claim_a5a03b831b354071bbbc9658213a7607",
+      "statement": "JavaPoet 1.0.0 represents a complete rewrite of the JavaWriter library, introducing immutable value objects and a builder-based API instead of streaming code generation.",
+      "evidence": [
+        {
+          "resource": "repo://CHANGELOG.md",
+          "version": "repo-file-v1:sha256:58bd6232cc9cc9a3f6e86ddb50d3db83fc90f5837dd4198f60f276f955270627"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.5.2",
+    "at": "2026-09-22T02:45:45.818Z"
+  }
+}
